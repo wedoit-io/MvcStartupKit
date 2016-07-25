@@ -1,0 +1,16 @@
+﻿@{
+    ViewBag.Title = "Home Page Backend";
+}
+
+<h4>Benveuto nella home backend</h4>
+
+
+@Html.DevExpress().NavBar(
+    settings =>
+    {
+        settings.Name = "myNavBar";
+        settings.Groups.Add("Group1").Items.Add("Item1-1");
+        settings.Groups.Add("Group2").Items.Add("Item2-1");
+        settings.Groups.FindByText("Group2").Expanded = false;
+    }).GetHtml()
+
